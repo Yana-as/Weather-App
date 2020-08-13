@@ -13,9 +13,11 @@
 		24D0DB5224E2FF0B000771A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D0DB5024E2FF0B000771A7 /* Main.storyboard */; };
 		24D0DB5424E2FF0D000771A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24D0DB5324E2FF0D000771A7 /* Assets.xcassets */; };
 		24D0DB5724E2FF0D000771A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D0DB5524E2FF0D000771A7 /* LaunchScreen.storyboard */; };
-		24D0DB8024E40872000771A7 /* NetworkWheatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D0DB7F24E40872000771A7 /* NetworkWheatherManager.swift */; };
+		24D0DB8024E40872000771A7 /* NetworkWeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D0DB7F24E40872000771A7 /* NetworkWeatherManager.swift */; };
 		24D0DB8224E409D1000771A7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D0DB8124E409D1000771A7 /* Constants.swift */; };
 		24D0DB8624E52C84000771A7 /* CurrentWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D0DB8524E52C84000771A7 /* CurrentWeatherData.swift */; };
+		24D0DB8824E5529B000771A7 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D0DB8724E5529B000771A7 /* CurrentWeather.swift */; };
+		24D0DB8A24E57100000771A7 /* View Controller+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D0DB8924E57100000771A7 /* View Controller+UITextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		24D0DB4724E2FF0B000771A7 /* Wheather Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wheather Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24D0DB4724E2FF0B000771A7 /* Weather Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24D0DB4A24E2FF0B000771A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24D0DB4C24E2FF0B000771A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		24D0DB4E24E2FF0B000771A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,11 +46,13 @@
 		24D0DB5324E2FF0D000771A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24D0DB5624E2FF0D000771A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24D0DB5824E2FF0D000771A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		24D0DB5D24E2FF0D000771A7 /* Wheather MapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wheather MapTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		24D0DB6824E2FF0D000771A7 /* Wheather MapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wheather MapUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		24D0DB7F24E40872000771A7 /* NetworkWheatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWheatherManager.swift; sourceTree = "<group>"; };
+		24D0DB5D24E2FF0D000771A7 /* Weather MapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Weather MapTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24D0DB6824E2FF0D000771A7 /* Weather MapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Weather MapUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24D0DB7F24E40872000771A7 /* NetworkWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWeatherManager.swift; sourceTree = "<group>"; };
 		24D0DB8124E409D1000771A7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		24D0DB8524E52C84000771A7 /* CurrentWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherData.swift; sourceTree = "<group>"; };
+		24D0DB8724E5529B000771A7 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		24D0DB8924E57100000771A7 /* View Controller+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View Controller+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,9 +91,9 @@
 		24D0DB4824E2FF0B000771A7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				24D0DB4724E2FF0B000771A7 /* Wheather Map.app */,
-				24D0DB5D24E2FF0D000771A7 /* Wheather MapTests.xctest */,
-				24D0DB6824E2FF0D000771A7 /* Wheather MapUITests.xctest */,
+				24D0DB4724E2FF0B000771A7 /* Weather Map.app */,
+				24D0DB5D24E2FF0D000771A7 /* Weather MapTests.xctest */,
+				24D0DB6824E2FF0D000771A7 /* Weather MapUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +114,7 @@
 		24D0DB7A24E2FF35000771A7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				24D0DB8924E57100000771A7 /* View Controller+UITextFieldDelegate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -117,8 +122,9 @@
 		24D0DB7B24E2FF4B000771A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				24D0DB7F24E40872000771A7 /* NetworkWheatherManager.swift */,
+				24D0DB7F24E40872000771A7 /* NetworkWeatherManager.swift */,
 				24D0DB8524E52C84000771A7 /* CurrentWeatherData.swift */,
+				24D0DB8724E5529B000771A7 /* CurrentWeather.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -154,9 +160,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		24D0DB4624E2FF0B000771A7 /* Wheather Map */ = {
+		24D0DB4624E2FF0B000771A7 /* Weather Map */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24D0DB7124E2FF0D000771A7 /* Build configuration list for PBXNativeTarget "Wheather Map" */;
+			buildConfigurationList = 24D0DB7124E2FF0D000771A7 /* Build configuration list for PBXNativeTarget "Weather Map" */;
 			buildPhases = (
 				24D0DB4324E2FF0B000771A7 /* Sources */,
 				24D0DB4424E2FF0B000771A7 /* Frameworks */,
@@ -166,14 +172,14 @@
 			);
 			dependencies = (
 			);
-			name = "Wheather Map";
+			name = "Weather Map";
 			productName = "Wheather Map";
-			productReference = 24D0DB4724E2FF0B000771A7 /* Wheather Map.app */;
+			productReference = 24D0DB4724E2FF0B000771A7 /* Weather Map.app */;
 			productType = "com.apple.product-type.application";
 		};
-		24D0DB5C24E2FF0D000771A7 /* Wheather MapTests */ = {
+		24D0DB5C24E2FF0D000771A7 /* Weather MapTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24D0DB7424E2FF0D000771A7 /* Build configuration list for PBXNativeTarget "Wheather MapTests" */;
+			buildConfigurationList = 24D0DB7424E2FF0D000771A7 /* Build configuration list for PBXNativeTarget "Weather MapTests" */;
 			buildPhases = (
 				24D0DB5924E2FF0D000771A7 /* Sources */,
 				24D0DB5A24E2FF0D000771A7 /* Frameworks */,
@@ -184,14 +190,14 @@
 			dependencies = (
 				24D0DB5F24E2FF0D000771A7 /* PBXTargetDependency */,
 			);
-			name = "Wheather MapTests";
+			name = "Weather MapTests";
 			productName = "Wheather MapTests";
-			productReference = 24D0DB5D24E2FF0D000771A7 /* Wheather MapTests.xctest */;
+			productReference = 24D0DB5D24E2FF0D000771A7 /* Weather MapTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		24D0DB6724E2FF0D000771A7 /* Wheather MapUITests */ = {
+		24D0DB6724E2FF0D000771A7 /* Weather MapUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24D0DB7724E2FF0D000771A7 /* Build configuration list for PBXNativeTarget "Wheather MapUITests" */;
+			buildConfigurationList = 24D0DB7724E2FF0D000771A7 /* Build configuration list for PBXNativeTarget "Weather MapUITests" */;
 			buildPhases = (
 				24D0DB6424E2FF0D000771A7 /* Sources */,
 				24D0DB6524E2FF0D000771A7 /* Frameworks */,
@@ -202,9 +208,9 @@
 			dependencies = (
 				24D0DB6A24E2FF0D000771A7 /* PBXTargetDependency */,
 			);
-			name = "Wheather MapUITests";
+			name = "Weather MapUITests";
 			productName = "Wheather MapUITests";
-			productReference = 24D0DB6824E2FF0D000771A7 /* Wheather MapUITests.xctest */;
+			productReference = 24D0DB6824E2FF0D000771A7 /* Weather MapUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -229,7 +235,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 24D0DB4224E2FF0B000771A7 /* Build configuration list for PBXProject "Wheather Map" */;
+			buildConfigurationList = 24D0DB4224E2FF0B000771A7 /* Build configuration list for PBXProject "Weather Map" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -242,9 +248,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				24D0DB4624E2FF0B000771A7 /* Wheather Map */,
-				24D0DB5C24E2FF0D000771A7 /* Wheather MapTests */,
-				24D0DB6724E2FF0D000771A7 /* Wheather MapUITests */,
+				24D0DB4624E2FF0B000771A7 /* Weather Map */,
+				24D0DB5C24E2FF0D000771A7 /* Weather MapTests */,
+				24D0DB6724E2FF0D000771A7 /* Weather MapUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -281,9 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24D0DB8024E40872000771A7 /* NetworkWheatherManager.swift in Sources */,
+				24D0DB8A24E57100000771A7 /* View Controller+UITextFieldDelegate.swift in Sources */,
+				24D0DB8024E40872000771A7 /* NetworkWeatherManager.swift in Sources */,
 				24D0DB8624E52C84000771A7 /* CurrentWeatherData.swift in Sources */,
 				24D0DB4F24E2FF0B000771A7 /* ViewController.swift in Sources */,
+				24D0DB8824E5529B000771A7 /* CurrentWeather.swift in Sources */,
 				24D0DB8224E409D1000771A7 /* Constants.swift in Sources */,
 				24D0DB4B24E2FF0B000771A7 /* AppDelegate.swift in Sources */,
 				24D0DB4D24E2FF0B000771A7 /* SceneDelegate.swift in Sources */,
@@ -309,12 +317,12 @@
 /* Begin PBXTargetDependency section */
 		24D0DB5F24E2FF0D000771A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 24D0DB4624E2FF0B000771A7 /* Wheather Map */;
+			target = 24D0DB4624E2FF0B000771A7 /* Weather Map */;
 			targetProxy = 24D0DB5E24E2FF0D000771A7 /* PBXContainerItemProxy */;
 		};
 		24D0DB6A24E2FF0D000771A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 24D0DB4624E2FF0B000771A7 /* Wheather Map */;
+			target = 24D0DB4624E2FF0B000771A7 /* Weather Map */;
 			targetProxy = 24D0DB6924E2FF0D000771A7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -511,7 +519,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wheather Map.app/Wheather Map";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Weather Map.app/Weather Map";
 			};
 			name = Debug;
 		};
@@ -533,7 +541,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wheather Map.app/Wheather Map";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Weather Map.app/Weather Map";
 			};
 			name = Release;
 		};
@@ -580,7 +588,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		24D0DB4224E2FF0B000771A7 /* Build configuration list for PBXProject "Wheather Map" */ = {
+		24D0DB4224E2FF0B000771A7 /* Build configuration list for PBXProject "Weather Map" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24D0DB6F24E2FF0D000771A7 /* Debug */,
@@ -589,7 +597,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24D0DB7124E2FF0D000771A7 /* Build configuration list for PBXNativeTarget "Wheather Map" */ = {
+		24D0DB7124E2FF0D000771A7 /* Build configuration list for PBXNativeTarget "Weather Map" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24D0DB7224E2FF0D000771A7 /* Debug */,
@@ -598,7 +606,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24D0DB7424E2FF0D000771A7 /* Build configuration list for PBXNativeTarget "Wheather MapTests" */ = {
+		24D0DB7424E2FF0D000771A7 /* Build configuration list for PBXNativeTarget "Weather MapTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24D0DB7524E2FF0D000771A7 /* Debug */,
@@ -607,7 +615,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24D0DB7724E2FF0D000771A7 /* Build configuration list for PBXNativeTarget "Wheather MapUITests" */ = {
+		24D0DB7724E2FF0D000771A7 /* Build configuration list for PBXNativeTarget "Weather MapUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24D0DB7824E2FF0D000771A7 /* Debug */,
