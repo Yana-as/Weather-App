@@ -6,10 +6,18 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController{
+class ViewController: UIViewController {
 
-    var networkWeatherManager = NetworkWeatherManager()
+    var networkWheatherManager = NetworkWeatherManager()
+    lazy var locationManager: CLLocationManager = {
+        let lm = CLLocationManager()
+        lm.delegate = self
+        lm.desiredAccuracy =  kCLLocationAccuracyKilometer
+        lm.requestWhenInUseAuthorization() 
+        return lm
+    }()
     
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var customCitySearchTextField: UITextField!
@@ -29,9 +37,15 @@ class ViewController: UIViewController{
         
         searchButton.layer.cornerRadius = 5
         searchButton.clipsToBounds = true
-
-        networkWeatherManager.delegate = self
-        networkWeatherManager.fetchCurrentWeather(forCity: "London")
+       
+        networkWheatherManager.onCompletion = { [weak self] currentWeather in
+            guard let self = self else { return }
+            self.updateInterfactWith(weather: currentWeather)
+        }
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.requestLocation()
+        }
         
         self.customCitySearchTextField.delegate = self
         
@@ -39,20 +53,44 @@ class ViewController: UIViewController{
         view.addGestureRecognizer(tapGesture)
     }
 
+    func updateInterfactWith(weather: CurrentWeather) {
+        DispatchQueue.main.async {
+            self.currentCityLabel.text = weather.cityName
+            self.currentTemperatureLabel.text = weather.currentTemperatureString
+            self.maxTemperatureLabel.text = weather.maxTemperatureString + "°C"
+            self.minTemperatureLabel.text = weather.minTemperatureString + "°C"
+            self.humidityLabel.text = weather.humidityString + "%"
+            self.feelsLikeLabel.text = weather.feelsLikeTemperatureString + "°C"
+            self.pressureLabel.text = weather.pressureString + " hPa"
+            self.sunsetLabel.text = weather.sunsetString
+            self.sunriseLabel.text = weather.sunriseString
+            self.wheatherImage.image = UIImage(named: weather.imageWeatherNameString)
+        }
+    }
+    
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         
         guard let city = customCitySearchTextField.text else { return }
         let customCity = city.split(separator: " ").joined(separator: "%20")
         customCitySearchTextField.text = ""
         
-        networkWeatherManager.fetchCurrentWeather(forCity: customCity)
+        networkWheatherManager.fetchCurrentWeather(forRequestType: .cityName(city: customCity))
         textFieldShouldReturn(customCitySearchTextField)
     }
 }
 
-extension ViewController: NetworkWeatherManagerDelegate {
-    func updateInterface(_: NetworkWeatherManager, with currentWeather: CurrentWeather) {
-        print(currentWeather.cityName)
+// MARK: CLLocationManagerDelegate
+extension ViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        let latitude = location.coordinate.latitude
+        let longitude = location.coordinate.longitude
+        
+        networkWheatherManager.fetchCurrentWeather(forRequestType: .coordinates(latitude: latitude, longitude: longitude))
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
     }
 }
 
