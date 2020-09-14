@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CurrentWeather {
+struct CurrentWeather: CurrentWeatherRequiredVariables {
     
     let cityName: String
     
@@ -90,5 +90,4 @@ struct CurrentWeather {
         let date24 = dateFormatter.string(from: date!)
         return date24
     }
-    // TODO
 }

@@ -8,8 +8,8 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UpdateInterface {
+    
     var networkWheatherManager = NetworkWeatherManager()
     lazy var locationManager: CLLocationManager = {
         let lm = CLLocationManager()
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
        
         networkWheatherManager.onCompletion = { [weak self] currentWeather in
             guard let self = self else { return }
-            self.updateInterfactWith(weather: currentWeather)
+            self.updateInterfaceWith(weather: currentWeather)
         }
         
         if CLLocationManager.locationServicesEnabled() {
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
     }
 
-    func updateInterfactWith(weather: CurrentWeather) {
+    func updateInterfaceWith(weather: CurrentWeather) {
         DispatchQueue.main.async {
             self.currentCityLabel.text = weather.cityName
             self.currentTemperatureLabel.text = weather.currentTemperatureString
