@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241F513B250F6B610032F39B /* CurrentWeatherStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241F513A250F6B610032F39B /* CurrentWeatherStructure.swift */; };
 		24D0DB4B24E2FF0B000771A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D0DB4A24E2FF0B000771A7 /* AppDelegate.swift */; };
 		24D0DB4D24E2FF0B000771A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D0DB4C24E2FF0B000771A7 /* SceneDelegate.swift */; };
 		24D0DB4F24E2FF0B000771A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D0DB4E24E2FF0B000771A7 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		241F513A250F6B610032F39B /* CurrentWeatherStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherStructure.swift; sourceTree = "<group>"; };
 		24D0DB4724E2FF0B000771A7 /* Weather Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24D0DB4A24E2FF0B000771A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24D0DB4C24E2FF0B000771A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		241F5139250F6AAB0032F39B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				241F513A250F6B610032F39B /* CurrentWeatherStructure.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		24D0DB3E24E2FF0B000771A7 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +111,7 @@
 		24D0DB4924E2FF0B000771A7 /* Wheather Map */ = {
 			isa = PBXGroup;
 			children = (
+				241F5139250F6AAB0032F39B /* Protocols */,
 				24D0DB7A24E2FF35000771A7 /* Extensions */,
 				24D0DB7C24E2FF57000771A7 /* Views */,
 				24D0DB7B24E2FF4B000771A7 /* Models */,
@@ -287,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				241F513B250F6B610032F39B /* CurrentWeatherStructure.swift in Sources */,
 				24D0DB8A24E57100000771A7 /* View Controller+UITextFieldDelegate.swift in Sources */,
 				24D0DB8024E40872000771A7 /* NetworkWeatherManager.swift in Sources */,
 				24D0DB8624E52C84000771A7 /* CurrentWeatherData.swift in Sources */,
