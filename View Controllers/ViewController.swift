@@ -11,6 +11,8 @@ import CoreLocation
 class ViewController: UIViewController, UpdateInterface {
     
     var networkWheatherManager = NetworkWeatherManager()
+    var localJsonParser = LocalJsonParser()
+    
     lazy var locationManager: CLLocationManager = {
         let lm = CLLocationManager()
         lm.delegate = self
@@ -18,6 +20,7 @@ class ViewController: UIViewController, UpdateInterface {
         lm.requestWhenInUseAuthorization() 
         return lm
     }()
+    @IBOutlet weak var searchResultsTableView: UITableView!
     
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var customCitySearchTextField: UITextField!
@@ -51,6 +54,11 @@ class ViewController: UIViewController, UpdateInterface {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapGesture))
         view.addGestureRecognizer(tapGesture)
+        
+        searchResultsTableView.layer.cornerRadius = 5
+        searchResultsTableView.dataSource = self
+        
+        localJsonParser.getData()
     }
 
     func updateInterfaceWith(weather: CurrentWeather) {
@@ -94,4 +102,18 @@ extension ViewController: CLLocationManagerDelegate {
     }
 }
 
-
+// MARK: TableView Data Source
+extension ViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = self.searchResultsTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SearchCityTableViewCell
+        
+        cell.cityNameLabel.text = "City name"
+        return cell
+    }
+}

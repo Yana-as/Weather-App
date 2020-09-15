@@ -27,3 +27,8 @@ protocol CurrentWeatherRequiredVariables {
     func unixTimeConvertion(unixTime: Double) -> String
 }
 
+protocol CityNames {
+    
+    
+}
+
